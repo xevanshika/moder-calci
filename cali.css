@@ -1,0 +1,109 @@
+
+/* Basic layout */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #1e1e1e;
+  color: #f2f2f2;
+}
+
+/* Calculator */
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 260px;
+  transition: background 0.3s;
+}
+body.dark .calculator {
+  background: #2a2a2a;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.top-bar button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+body.dark #display {
+  background: #444;
+  color: white;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.buttons button {
+  padding: 15px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e0e0e0;
+  transition: background 0.2s;
+}
+.buttons button:hover {
+  background: #ccc;
+}
+body.dark .buttons button {
+  background: #555;
+  color: white;
+}
+body.dark .buttons button:hover {
+  background: #666;
+}
+
+/* History */
+.history {
+  margin-left: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.history h3 {
+  margin: 0 0 10px;
+}
+#history-list {
+  list-style: none;
+  padding: 0;
+}
+#history-list li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+body.dark #history-list li {
+  border-bottom: 1px solid #444;
+}
